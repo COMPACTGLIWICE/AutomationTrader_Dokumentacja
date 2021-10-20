@@ -1,0 +1,558 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/DLL/docfx_project_wersja_startowaATRADER",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "P3jb8cNFrFRAfpOMtrcjLEqibOgzgiTAQJ9jqhXxSy8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/BrakujaceTowary.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/BrakujaceTowary.html",
+          "hash": "bakmWOfUZ8Kf0aBhsVObZgMacc5sa5w9R9iw40698UQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/KonfiguracjaStatZam.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/KonfiguracjaStatZam.html",
+          "hash": "jsJYsocvmf+FyJ6fiAjlNDACW0Cowt5ehLyvTgc3AMs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/PowiadomieniaOZmianStat.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/PowiadomieniaOZmianStat.html",
+          "hash": "vQXq7d0zQkBqG4pV49ve51JF8Cgx6uluFA+HkaEFIW8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TworzenieZOOzMaila.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TworzenieZOOzMaila.html",
+          "hash": "TWyT1fgZ1i/84XFDod7eUY8oLByOlKyxMoSp/1xJKVc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/UsuwanieNiepotrzebnychZOD.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/UsuwanieNiepotrzebnychZOD.html",
+          "hash": "mo8Bf05M1bYrkLT14AbaP8d8D2LtY65WQcGuGhN1UJc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/WiadAutomatyczna.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/WiadAutomatyczna.html",
+          "hash": "Ang7vkRiDYoUISvp2ha8DxaCEQKaH+SRDhDjcJbz9dE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/WieleZOD.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/WieleZOD.html",
+          "hash": "KjuHLhB788/KeAcUQAie2tAiAO8Qlj9zhw5JULeDzso="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/duplikatyTowarow.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/duplikatyTowarow.html",
+          "hash": "G+06SDYexLIDi16U8Zw1pVqu6f4DtXFaRmo9jIKQrnk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/introMongo.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/introMongo.html",
+          "hash": "m5QkHnUjoe6HBzivNEbvb7CmECY5Y+8WeEOyZ4fFAf8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/obiegDokumentow.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/obiegDokumentow.html",
+          "hash": "ino6//WpFLvb/27Q3uSQuZBAEQ3uHF1epQWsCzVnLCg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/producenci.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/producenci.html",
+          "hash": "sSJBGKvyLsUK+ZwJCvYDJR5JfhRN/Ef6/F3mp2gJcUE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/szablony.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/szablony.html",
+          "hash": "C6tGvvwG3stclYUHXMDsKlnDqUraBMybMzkgj9ZdkkY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "GvXl2sFEm2bswHxI6NdLsgm43rvR9diVOi8+ZBluvQA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/MongoTowaryIStany.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/MongoTowaryIStany.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/NowaWiad.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/NowaWiad.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/NowyStatus.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/NowyStatus.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Old/DefStatusu.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Old/DefStatusu.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Old/PodgladMongo.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Old/PodgladMongo.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Old/StatZam.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Old/StatZam.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Old/SzabStatusu.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Old/SzabStatusu.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Old/SzablonEmail.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Old/SzablonEmail.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Old/UstawieniaMongo.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Old/UstawieniaMongo.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Old/WiadWorker.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Old/WiadWorker.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Old/Wiadomosc.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Old/Wiadomosc.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Old/ZOStatZam.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Old/ZOStatZam.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/StatusNaZOO.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/StatusNaZOO.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/SzablonyWiad.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/SzablonyWiad.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/TowaryDuplikaty.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/TowaryDuplikaty.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/TworzenieZOOzMaila.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/TworzenieZOOzMaila.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/TypWiad.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/TypWiad.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Ustawienia.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Ustawienia.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/UsunZOD.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/UsunZOD.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/UtworzNowyStatus.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/UtworzNowyStatus.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/UtworzoneZOD.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/UtworzoneZOD.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/WieleZOD.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/WieleZOD.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/WorkerWybieraniaSzabDoStat.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/WorkerWybieraniaSzabDoStat.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/WybieranieSzabDoStatusu.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/WybieranieSzabDoStatusu.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/WybierzKontrahDoWieluZOD.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/WybierzKontrahDoWieluZOD.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/ZOOzMailaKontrah.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/ZOOzMailaKontrah.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Zalaczniki.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Zalaczniki.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "Zw2EKgMTfb4J9iW3V7+/gs2xwdlq4UKUaS8yM18lvgc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "EmptyTocItemName"
+      ],
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "ow+oPNfrajtrGvvWEEH3twNHKZo2gAIJX8mTan6Jmmo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 14,
+          "skipped_file_count": 14
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
