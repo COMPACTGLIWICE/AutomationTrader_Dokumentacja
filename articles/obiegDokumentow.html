@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dokumentacja tworzenia dokument&#243;w wg okre&#347;lonego obiegu </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Dokumentacja tworzenia dokument&#243;w wg okre&#347;lonego obiegu ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+  
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" src="../images/logo.png" height="46" width="46" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="dokumentacja-tworzenia-dokumentów-wg-określonego-obiegu">Dokumentacja tworzenia dokumentów wg określonego obiegu</h2>
+
+<h4 id="definicje-dokumentów">Definicje dokumentów</h4>
+<ul>
+<li>ZOO (Zapytanie ofertowe od odbiorcy)</li>
+<li>ZOD (Zapytanie ofertowe do dostawcy)</li>
+<li>ZD (Zamówienie do dostawcy)</li>
+<li>ZK (Faktura zakupu)</li>
+<li>PZ (Przyjęcie magazynowe)</li>
+<li>OO (Oferta do odbiorcy)</li>
+<li>ZO (Zamówienie od odbiorcy)</li>
+<li>FV (Faktura sprzedaży)</li>
+<li>WZ (Wydanie magazynowe)</li>
+<li>FPRO (Faktura proforma)</li>
+</ul>
+<h4 id="etap-tworzenia">Etap tworzenia:</h4>
+<p>Obieg dokumentów rozpoczyna się od dokumentu ZOO. Operator może wystawić ten dokument ręczni bądź utworzyć go z wiadomości mailowej tak jak to było wspomniane w innym artykule. Następnie mamy dwie ścieżki do wyboru:</p>
+<ul>
+<li>Zakup towaru</li>
+<li>Sprzedaż towaru</li>
+</ul>
+<h4 id="zakup-towaru">Zakup towaru</h4>
+<p>W sytuacji gdy towar znajdujący się na dokumencie ZOO nie znajduje się na magazynie (zwyczajnie nie posiadamy go) w pierwszej kolejności musimy go kupić wystawiając dokument ZOD. Po wystawieniu dokumentu ZOD i jego zatwierdzeniu następnym krokiem będzie wystawienie dokumentu ZD. Na tym etapie musimy wskazać cenę zakupu która następnie przeniesie się na kolejny dokument w relacji czyli ZK. Przy wystawianiu dokumentu ZK automatycznie w tle tworzy się dokument PZ który przyjmuje towar na magazyn. Od tego momentu będziemy mogli wrócić do dokumentu ZOO i przejść drugą ścieżkę czyli ścieżkę sprzedaży.</p>
+<h2 id="sprzedaż-towaru">Sprzedaż towaru</h2>
+<p>W sytuacji gdy posiadamy towar na magazynie wystawiamy dokument OO a następnie ZO. Po wystawieniu dokumentu ZO mamy do wyboru dwie opcje. Pierwszą jest wystawienie dokumentu faktury FV 3 do której w następnej kolejności możemy wystawić dokument wydania WZ. Aby poprawnie wystawić dokumenty wystawiamy FV 3 i zostawiamy dokument w stanie 'Bufor'. Dokument wydania będzie możliwy do utworzenia tylko i wyłącznie w sytuacji gdy faktura ma stan 'Bufor'. Jeśli zatwierdzimy dokument FV 3 nie będziemy w stanie wystawić dokumentu WZ (trzeba wcześniej przenieść dokument faktury do bufora klikając w czynności i wybierając 'przenieś dokument do bufora'). Jeśli natomiast chcemy w pierwszej kolejności wystawić dokument wydania a następnie fakturę to z dokumentu ZO w relacji wystawiamy dokument WZ 2. Następnie na dokumencie WZ 2 możemy w relacji wystawić dokument FV 2.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/qbolPoL/PFE_GrupowanieTowarow/blob/main/docfx_project_wersja_startowaATRADER/articles/obiegDokumentow.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

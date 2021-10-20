@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dokumentacja mechanizmu obustronnej integracji pomi&#281;dzy programem Enova365 i baz&#261; MongoDB </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Dokumentacja mechanizmu obustronnej integracji pomi&#281;dzy programem Enova365 i baz&#261; MongoDB ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+  
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" src="../images/logo.png" height="46" width="46" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="dokumentacja-mechanizmu-obustronnej-integracji-pomiędzy-programem-enova365-i-bazą-mongodb">Dokumentacja mechanizmu obustronnej integracji pomiędzy programem Enova365 i bazą MongoDB</h2>
+
+<h4 id="wstęp">Wstęp:</h4>
+<p>Mechanizm ten ma na celu wykonywać obustronną wymianę danych pomiędzy bazą MongoDB oraz bazą programu Enova365.</p>
+<h4 id="towary">Towary:</h4>
+<p>Mechanizm pod względem towarów wykonuje następujące czynności:</p>
+<ol>
+<li>Wysyła nowo utworzone towary w programie Enova365 do bazy MongoDB</li>
+<li>Wysyła do programu Enova365 nowo utworzone towary po stronie bazy MongoDB</li>
+<li>Aktualizuje towary</li>
+<li>Usuwa towary (zmienia wpisy produktów &quot;isHistorical = true&quot;)</li>
+</ol>
+<hr>
+<ol>
+<li>W momencie utworzenia nowej kartoteki towarowej w programie Enova365 mechanizm w trakcie zapisywania sprawdza czy dodany towar istnieje w bazie MongoDB. Jeśli dodawany przez nas towar nie znajduje się w bazie MongoDB mechanizm automatycznie tworzy nowy wpisy w bazie.</li>
+<li>Dodatek harmonogramu zadań będzie cyklicznie sprawdzał co określony czas czy po stronie bazy MongoDB został dodany jakiś nowy towar. W przypadku gdy harmonogram znajdzie towar w bazie MongoDB który nie znajduje się w programie Enova365 mechanizm automatycznie utworzy w programie nową kartotekę towarową na podstawie danych z MongoDB oraz zaktualizuje je o numer Guid z programu Enova365.</li>
+<li>W momencie zapisywania zmian na kartotece towaru mechanizm automatycznie wyszuka towar w bazie MongoDB i zaktualizuje wpis w bazie o nowe dane.</li>
+<li>W momencie usunięcia towaru po stronie programu Enova365 mechanizm automatycznie zaktualizuje wpis w bazie MongoDB dla tego towaru w polu isHistorical na true.</li>
+</ol>
+<h4 id="stany-magazynowe">Stany magazynowe:</h4>
+<p>Mechanizm pod względem stanów magazynowych wykonuje następujące czynności:</p>
+<ol>
+<li>Tworzy nowe wpisy po stronie bazy MongoDB</li>
+<li>Tworzy dokumenty przyjęcia/wydania po stronie programu Enova365</li>
+<li>Aktualizuje stany magazynowe towarów po obu stronach</li>
+</ol>
+<hr>
+<ol>
+<li>Mechanizm w momencie zatwierdzania dokumentów handlowych sprawdza aktualny stan magazynowy towaru. Następnie łączy się z bazą MongoDB i sprawdza czy istnieje wpis z towarem z dokumentu. Jeśli takowy nie istnieje mechanizm automatycznie dodaje wpis do bazy MongoDB z aktualnym stane towaru.</li>
+<li>Dodatek harmonogramu zadań cyklicznie co określony czas będzie sprawdzał czy w programie Enova365 stany magazynowe towarów są takie same jak w bazie MongoDB. W przypadku gdy mechanizm znajdzie jakieś różnice automatycznie utworzy dokument przychodu wewnętrznego (PW MONGO) w przypadku gdy stan magazynowy po stronie programu Enova365 będzie mniejszy niż w bazie MongoDB oraz dokument rozchodu wewnętrznego (RW MONGO) w przypadku gdy stan magazynowy towaru po stornie programu Enova365 będzie większy niż w bazie MongoDB.</li>
+<li>Mechanizm w momencie zatwierdzania nowych dokumentów handlowych oraz zatwierdzania jakichkolwiek zmian na dokumentach handlowych powodujących ruch magazynowy sprawdza aktualny stan magazynowy towaru. Następnie łączy się z bazą MongoDB i sprawdza czy istnieje wpis z towarem z dokumentu. Jeśli takowy istnieje to program automatycznie aktualizuje wpis w bazie o aktualne wartości. W drugą stronę natomiast dodatek harmonogramu zadań będzie sprawdzać czy stan w bazie MongoDB jest taki sam jak w programie Enova365. Jeśli napotka jakieś różnice to utworzy dokumenty PW MONGO/ RW MONGO w zależności od róznicy.</li>
+</ol>
+<h4 id="podgląd-danych">Podgląd danych:</h4>
+<p>W zakładce MongoDB mamy dostępne dwie zakładki umożliwiające nam podgląd danych z bazy MongoDB.</p>
+<ol>
+<li>Stany magazynowe</li>
+<li>Towary</li>
+</ol>
+<p>W zakładce &quot;Stany magazynowe&quot; możemy zobaczyć wszystkie dane z tabeli stanów magazynowych z MongoDB natomiast w zakładce &quot;Towary&quot; możemy zobaczyć dane z tabeli Towarów.</p>
+<p><img src="../images/MongoTowaryIStany.PNG" alt=""></p>
+<h4 id="konfiguracja">Konfiguracja</h4>
+<p>W opcjach programu</p>
+<pre><code>Narzędzia -&gt; Opcje 
+</code></pre>
+<p>znajdziemy nową zakłądkę konfiguracja która posiada pozycję 'Ustawienia dodatkowe'. W miejscu tym możemy wpisać dane połączeniowe do bazy MongoDB takie jak:</p>
+<ul>
+<li>Cluster</li>
+<li>Nazwa bazy towarów</li>
+<li>Nazwa bazy Stanów magazynowych</li>
+<li>Login użytkownika z którego mechanizm będzie korzystać</li>
+<li>Hasło do użytkownika z którego program będzie korzystać</li>
+</ul>
+<p>Parametry dodatkowe:</p>
+<ul>
+<li>Ile dni wstecz mechanizm ma pobierać towary (wg daty ostatniej zmiany w mongo)</li>
+<li>Checkbox służący do wyłączenia integracji z MongoDB</li>
+</ul>
+<p>Parametry powiadomień:</p>
+<ul>
+<li>Ile dni do powiadomienia
+(Wpisujemy ile dni musi minąć od ostatniego wystawionego dokumentu kontrahenta aby wiadomość została wysłana)</li>
+<li>Szablon informacji
+(Szablon wiadomości z którego zostanie utworzona wiadomość)</li>
+<li>Szablon wiadomości po wystawieniu faktury
+(Szablon wg którego zostanie utworzona wiadomość po wystawieniu faktury)</li>
+<li>Checkbox służący do wyłączenia wysyłania wiadomości po wystawieniu faktury</li>
+</ul>
+<p>Parametry grupowania kontrahentów:</p>
+<ul>
+<li>Ile vipów (Maksymalna ilość vipów w programie)</li>
+</ul>
+<p>Sprawdź połączenie z MongoDB</p>
+<ul>
+<li>Przycisk sprawdzający czy program poprawnie łączy się z bazą MongoDB</li>
+</ul>
+<p><img src="../images/Ustawienia.PNG" alt=""></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/qbolPoL/PFE_GrupowanieTowarow/blob/main/docfx_project_wersja_startowa/articles/introMongo.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
